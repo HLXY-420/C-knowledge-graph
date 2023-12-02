@@ -8,5 +8,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [react(), mdx(), tailwind()],
   site: 'https://hlxy-420.github.io',
-  base: '/c-knowledge-graph',
+  base: '/C-knowledge-graph',
 });
