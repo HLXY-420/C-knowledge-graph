@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QAstro looks for \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q or \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q files in the \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q directory.\\E$"}
