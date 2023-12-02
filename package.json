@@ -1,6 +1,7 @@
 {
   "name": "c-knowledge-graph",
   "type": "module",
+  "module": "commonjs",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",

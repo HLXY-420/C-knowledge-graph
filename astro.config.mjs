@@ -6,5 +6,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), mdx(), tailwind()]
+  integrations: [react(), mdx(), tailwind()],
+  site: 'https://hlxy-420.github.io',
+  base: '/c-knowledge-graph',
 });
