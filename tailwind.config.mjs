@@ -9,52 +9,71 @@ function withOpacity(variableName) {
 
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: [
+		'./src/**/*.{astro,html,md,mdx,ts,tsx}',
+		'./src/**/**/*.{astro,html,md,mdx,ts,tsx}'
+	],
 	theme: {
-		screens: {
-			sm: "640px",
-		},
 		extend: {
-			textColor: {
-				skin: {
-				  base: withOpacity("--color-text-base"),
-				  accent: withOpacity("--color-accent"),
-				  inverted: withOpacity("--color-fill"),
+		  colors: {
+			primary: {
+			  DEFAULT: "#17a2b8", // FandomWiki primary blue
+			  dark: "#007b89", // Darkened primary for dark mode
+			},
+			secondary: {
+			  DEFAULT: "#ffc107", // FandomWiki yellow
+			  dark: "#e0a000", // Darkened yellow for dark mode
+			},
+			background: {
+			  DEFAULT: "#fff", // Light background
+			  dark: "#121212", // Dark background
+			},
+			text: {
+			  DEFAULT: "#212529", // Dark text
+			  light: "#717171", // Lighter text
+			  dark: "#fff", // White text for dark mode
+			},
+		  },
+		  fontFamily: {
+			sans: ["Open Sans", "sans-serif"],
+		  },
+		  typography: {
+			DEFAULT: {
+			  css: {
+				a: {
+				  color: "#17a2b8", // FandomWiki blue for links
+				  fontWeight: "600",
+				},
+				h1: {
+				  fontSize: "2.5rem",
+				  fontWeight: "700",
+				  lineHeight: "1.25",
+				},
+				h2: {
+				  fontSize: "2rem",
+				  fontWeight: "700",
+				  lineHeight: "1.25",
+				},
+				h3: {
+				  fontSize: "1.75rem",
+				  fontWeight: "600",
+				  lineHeight: "1.25",
+				},
+				p: {
+				  fontSize: "1rem",
+				  lineHeight: "1.5",
+				},
+				code: {
+				  backgroundColor: "#f8f8f8",
+				  borderRadius: "4px",
+				  padding: "0.25rem 0.5rem",
+				  fontSize: "0.875rem",
 				},
 			  },
-			  backgroundColor: {
-				skin: {
-				  fill: withOpacity("--color-fill"),
-				  accent: withOpacity("--color-accent"),
-				  inverted: withOpacity("--color-text-base"),
-				  card: withOpacity("--color-card"),
-				  "card-muted": withOpacity("--color-card-muted"),
-				},
-			  },
-			  outlineColor: {
-				skin: {
-				  fill: withOpacity("--color-accent"),
-				},
-			  },
-			  borderColor: {
-				skin: {
-				  line: withOpacity("--color-border"),
-				  fill: withOpacity("--color-text-base"),
-				  accent: withOpacity("--color-accent"),
-				},
-			  },
-			  fill: {
-				skin: {
-				  base: withOpacity("--color-text-base"),
-				  accent: withOpacity("--color-accent"),
-				},
-				transparent: "transparent",
-			  },
-			  fontFamily: {
-				mono: ["IBM Plex Mono", "monospace"],
-			  },
+			},
+		  },
 		},
-	},
+	  },
 	plugins: [
 		require("@tailwindcss/typography")
 	],
