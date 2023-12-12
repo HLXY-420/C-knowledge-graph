@@ -1,6 +1,5 @@
 {
   "name": "c-knowledge-graph",
-  "type": "module",
   "module": "commonjs",
   "version": "0.0.1",
   "scripts": {
@@ -12,7 +11,8 @@
     "format:check": "prettier --plugin-search-dir=. --check .",
     "format": "prettier --plugin-search-dir=. --write .",
     "prepare": "husky install",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build:graph": "npx ts-node ./src/utils/BuildGraph.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
