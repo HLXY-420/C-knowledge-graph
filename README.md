@@ -1,5 +1,7 @@
 # The C knowledge graph
 
+![Logo](./public/logo.png)
+
 A knowledge graph of things mentioned in most of C programming language classes. For more details, see <https://hlxy-420.github.io/c-class-ideas/project-c-kg/>.
 
 ## Project Structure
@@ -18,3 +20,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm run build:graph`     | Build the knowledge graph (unfinished)           |
